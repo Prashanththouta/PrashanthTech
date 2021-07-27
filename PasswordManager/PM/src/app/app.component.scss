@@ -1,0 +1,13 @@
+$primary: rgb(76, 76, 177);
+
+.app-container {
+  width: 90vw;
+  height: 95vh;
+  background-color: $primary;
+  margin: 0 auto;
+}
+
+h1 {
+  padding: 1em;
+  text-align: center;
+}
