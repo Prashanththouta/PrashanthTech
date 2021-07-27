@@ -8,6 +8,11 @@ $primary: rgb(76, 76, 177);
 }
 
 h1 {
-  padding: 1em;
+  padding: 1em 1em 0em 1em;
+  text-align: center;
+}
+
+span {
+  display: block;
   text-align: center;
 }
