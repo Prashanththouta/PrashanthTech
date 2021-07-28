@@ -1,0 +1,36 @@
+<dx-lookup
+
+(onInput)="ip($event)"
+  [dataSource]="dataSource" 
+  valueChangeEvent="input"
+  (onValueChanged)="valueChanged($event)"
+   >
+  <dxo-drop-down-options 
+  id="123"
+  (onInput)="inputChange($event)"
+  [closeOnOutsideClick]="true" [showTitle]="false">
+  </dxo-drop-down-options>
+</dx-lookup>
+
+            <dx-drop-down-box 
+            [(value)]="gridBoxValue" 
+            [(opened)]="isGridBoxOpened" 
+            valueExpr="id" 
+            [deferRendering]="false"
+            displayExpr='name' 
+            placeholder="Select a value..." 
+            [showClearButton]="true"
+            [dataSource]="gridDataSource" 
+            (onOptionChanged)="onGridBoxOptionChanged($event)">
+            
+              <div *dxTemplate="let data of 'content'">
+                <dx-data-grid [dataSource]="gridDataSource" [columns]="['name']" [hoverStateEnabled]="true"
+                  [(selectedRowKeys)]="gridBoxValue" height="100%">
+                  <dxo-search-panel (onInput)="valueChanged($event)" ></dxo-search-panel>
+                  <dxo-selection mode="single"></dxo-selection>
+                  <dxo-filter-row [visible]="true"></dxo-filter-row>
+                  <dxo-scrolling mode="virtual"></dxo-scrolling>
+                  <dxo-paging [enabled]="true" [pageSize]="10"></dxo-paging>
+                </dx-data-grid>
+              </div>
+            </dx-drop-down-box>
