@@ -8,51 +8,45 @@ import { ChangeDetectorRef, Component, HostListener, OnInit } from '@angular/cor
 })
 export class LookupTestComponent implements OnInit {
 
-  dataSource = ["item1", "item2", "item3"];
-  gridBoxValue: number[] = [3];
-  isGridBoxOpened: boolean = false;
-  gridDataSource: any[] = [];
+  dataSource: Map<string, Product[]> = new Map<string, Product[]>();
+  items: string[] = [];
 
   constructor(private ref: ChangeDetectorRef) {
-    this.gridDataSource = [
-      { id: 1, name: 'Prashanth' },
-      { id: 2, name: 'Kaveri' },
-      { id: 3, name: 'Rithik' }
-    ]
+    let item = 'item';
+    for (let i = 0; i < 20; i++) {
+      this.preparedataSource(item + i);
+      this.items.push(item + i);
+    }
   }
 
   ngOnInit() {
   }
 
-  inputChange(e: any) {
-    console.log(e);
-  }
-
-  ip(e1: any) {
-    console.log(e1, 'ip');
-  }
-
-  optionChanged(e: any) {
-    console.log(e, 'oc');
-  }
-
   @HostListener("document:input", ["$event"])
   inputChangeC(e: any) {
-    // let elem = document.getElementById("123");
-    // console.log(elem);
-    // console.log(e);
   }
 
   valueChanged(e: any) {
     console.log(e, 'vc');
   }
 
-  onGridBoxOptionChanged(e: any) {
-    if (e.name === "value") {
-      this.isGridBoxOpened = false;
-      this.ref.detectChanges();
+  private preparedataSource(item: string) {
+    let ds: Product[] = [];
+    for (let i = 0; i < 100000; i++) {
+      let id = i + 1;
+      ds.push({ ProductId: item + id.toString(), ProductName: item +'Product' + id });
     }
+    this.dataSource.set(item, ds);
+  }
+
+  getDataSource(item: string) {
+    return <any[]>this.dataSource.get(item);
   }
 
 }
 
+
+interface Product {
+  ProductId: string;
+  ProductName: string;
+}

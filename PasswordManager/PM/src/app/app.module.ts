@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { DxDataGridModule, DxDropDownBoxModule, DxLookupModule } from 'devextreme-angular';
+import { DxDataGridModule, DxDropDownBoxModule, DxLookupModule, DxSelectBoxModule } from 'devextreme-angular';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -18,7 +18,8 @@ import { PasswordListComponent } from './PasswordList/PasswordList.component';
     AppRoutingModule,
     DxLookupModule,
     DxDropDownBoxModule,
-    DxDataGridModule
+    DxDataGridModule,
+    DxSelectBoxModule
   ],
   providers: [],
   bootstrap: [AppComponent]
