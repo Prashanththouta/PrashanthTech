@@ -15,7 +15,7 @@ export class PasswordListComponent implements OnInit {
   constructor(private passwordListService: PasswordlistService) { }
 
   ngOnInit() {
-    
+    this.ds = this.passwordListService.UserData;
   }
 
 }

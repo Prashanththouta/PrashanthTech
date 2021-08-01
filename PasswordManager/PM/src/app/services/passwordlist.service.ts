@@ -11,14 +11,15 @@ export class PasswordlistService {
   private sites: Site[] = [];
   private phoneNos: PhoneNo[] = [];
   private emails: Email[] = [];
-  private userPasswordDetails: IPasswordData[] = [];
+  private userPasswordDetails: IPasswordData[] | any[] = [];
 
   constructor() {
     this.addDefaultData();
   }
 
-  addUsePasswordData(email: Email, phoneNo: PhoneNo, site: Site, password: string) {
+  addUsePasswordData(email: Email | any, phoneNo: PhoneNo | any, site: Site | any, password: string) {
     this.userPasswordDetails.push({ email: email, phoneNo: phoneNo, site: site, password: password });
+    console.log(this.userPasswordDetails);
   }
 
   addSite(name: string) {
@@ -66,10 +67,10 @@ export class PasswordlistService {
     this.addPhoneNo(970, PhoneNoTye.Primary);
     this.addPhoneNo(801, PhoneNoTye.Secondary);
 
-    this.addUsePasswordData(this.emails[0], this.phoneNos[0], this.sites[0], '123456');
-    this.addUsePasswordData(this.emails[1], this.phoneNos[0], this.sites[1], '1234561');
-    this.addUsePasswordData(this.emails[2], this.phoneNos[0], this.sites[2], '123456');
-    this.addUsePasswordData(this.emails[0], this.phoneNos[1], this.sites[0], '123456');
+    this.addUsePasswordData(this.emails[0].email, this.phoneNos[0].PhoneNo, this.sites[0].site, '123456');
+    this.addUsePasswordData(this.emails[1].email, this.phoneNos[0].PhoneNo, this.sites[1].site, '1234561');
+    this.addUsePasswordData(this.emails[2].email, this.phoneNos[0].PhoneNo, this.sites[2].site, '123456');
+    this.addUsePasswordData(this.emails[0].email, this.phoneNos[1].PhoneNo, this.sites[0].site, '123456');
   }
 
 

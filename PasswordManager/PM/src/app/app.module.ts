@@ -2,7 +2,9 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import {
   DxDataGridModule, DxDropDownBoxModule, DxLookupModule, DxSelectBoxModule,
-  DxPopupModule } from 'devextreme-angular';
+  DxPopupModule, 
+  DxTextBoxModule,
+  DxButtonModule} from 'devextreme-angular';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -36,7 +38,9 @@ import { AdduserComponent } from './adduser/adduser.component';
     DxDropDownBoxModule,
     DxDataGridModule,
     DxSelectBoxModule,
-    DxPopupModule
+    DxPopupModule,
+    DxTextBoxModule,
+    DxButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent]

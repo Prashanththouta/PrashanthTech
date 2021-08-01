@@ -8,13 +8,32 @@ title="Add Site"
       <div class="dx-field">
         <label class="dx-field-label">Site</label>
         <div class="dx-field-value">
-          <dx-select-box
-          [dataSource]="sitesList"
-          displayExpr="name"
-          valueExpr="name" ></dx-select-box>
+          <dx-select-box [dataSource]="sitesList" displayExpr="site" valueExpr="site" [(value)]="site" ></dx-select-box>
         </div>
       </div>
+      <div class="dx-field">
+        <label class="dx-field-label">Email</label>
+        <div class="dx-field-value">
+          <dx-select-box [dataSource]="emailList" displayExpr="email" valueExpr="email" [(value)]="email" ></dx-select-box>
+        </div>
+      </div>
+      <div class="dx-field">
+        <label class="dx-field-label">PhoneNo</label>
+        <div class="dx-field-value">
+          <dx-select-box [dataSource]="phoneNoList" displayExpr="PhoneNo" valueExpr="PhoneNo" [(value)]="phoneNo" ></dx-select-box>
+        </div>
+      </div>
+      <div class="dx-field">
+        <label class="dx-field-label">Password</label>
+        <div class="dx-field-value">
+          <dx-text-box mode="password"  [(value)]="password" ></dx-text-box>
+        </div>
+      </div>
+      <div class="dx-field">
+        <div class="dx-field-value">
+          <dx-button (onClick)="adduserData()" text="Add"></dx-button>
+        </div>
+      </div>
+      </div>
     </div>
-
-  </div>
 </dx-popup>
