@@ -1,18 +1,8 @@
-$primary: rgb(76, 76, 177);
+@import url("../assets/styles/variables.scss");
 
 .app-container {
   width: 90vw;
   height: 95vh;
-  background-color: $primary;
+  background-color: rgb(76, 76, 177);
   margin: 0 auto;
-}
-
-h1 {
-  padding: 1em 1em 0em 1em;
-  text-align: center;
-}
-
-span {
-  display: block;
-  text-align: center;
 }

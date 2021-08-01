@@ -1,0 +1,20 @@
+.app-layout {
+  width: 90vw;
+  height: 95vh;
+  margin: 0 auto;
+  background-color: rgb(76, 76, 177);
+  position: relative;
+}
+
+.app-header {
+  height: 5vh;
+  min-height: 50px;
+  line-height: 5vh;
+  background-color: rgba(100, 100, 228, 1);
+  position: sticky;
+  top: 0px;
+}
+
+.app-body {
+  min-height: 95vh;
+}

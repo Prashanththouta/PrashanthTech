@@ -1,0 +1,20 @@
+<dx-popup 
+[(visible)]="isShowAdduser"
+title="Add Site" 
+[closeOnOutsideClick]="false"
+(onHiding) ="onHide()">
+  <div *dxTemplate="let item of 'content'">
+    <div class="dx-fieldset">
+      <div class="dx-field">
+        <label class="dx-field-label">Site</label>
+        <div class="dx-field-value">
+          <dx-select-box
+          [dataSource]="sitesList"
+          displayExpr="name"
+          valueExpr="name" ></dx-select-box>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</dx-popup>
