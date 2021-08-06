@@ -15,9 +15,11 @@ const routes: Routes = [
       { path: 'signup', component: SignupComponent },
       { path: 'signin', component: SigninComponent },
       { path: 'dashboard', component: DashboardComponent },
-      { path: 'adduser', component: AdduserComponent }
+      { path: 'adduser', component: AdduserComponent },
+      {path: 'settings',  loadChildren: () => import("./test-modules/settings.module").then(m => m.SettingsModule)}
     ]
   },
+  
   {path: '**', component: PagenotfoundComponent}
 ];
 
