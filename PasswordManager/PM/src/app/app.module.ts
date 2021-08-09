@@ -17,6 +17,7 @@ import { SigninComponent } from './Authorization/signin/signin.component';
 import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { AdduserComponent } from './adduser/adduser.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [			
@@ -34,6 +35,7 @@ import { AdduserComponent } from './adduser/adduser.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    HttpClientModule,
     DxLookupModule,
     DxDropDownBoxModule,
     DxDataGridModule,
