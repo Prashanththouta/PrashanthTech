@@ -5,6 +5,11 @@
     <li (click)="navigateToUserDetail()"  routerLinkActive="active" >Prashanth</li>
     <li routerLink="/settings/admin/user/userdetail">kaveri</li>
     <li routerLink="./userdetail">Rithik</li>
+    <li routerLink="./pos">POS Customer Creation</li>
 </ul>
 
-<div (click)="getServerData()" >Server Data</div>
+<div (click)="getServerData()" >Get Users</div>
+<dx-data-grid
+    [columns]="['Id', 'UserName', '_Password', 'SessionId']"
+    [dataSource]="existUsers"  >
+</dx-data-grid>
