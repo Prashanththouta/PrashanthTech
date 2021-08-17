@@ -1,7 +1,26 @@
 .active {
-    color: pink;
+  color: pink;
 }
 
 li:active {
-    color: purple;
+  color: purple;
+}
+
+.parent .node-item {
+  background-color: gray;
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+
+.parent .master-item {
+  background-color: aqua;
+  font-weight: 0.7rem;
+}
+
+.parent {
+  background-color: bisque;
+}
+
+#Honda_Amaze {
+  color: yellow;
 }

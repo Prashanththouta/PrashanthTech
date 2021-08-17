@@ -13,3 +13,8 @@
     [columns]="['Id', 'UserName', '_Password', 'SessionId']"
     [dataSource]="existUsers"  >
 </dx-data-grid>
+
+<!-- MasterWindow -->
+<div class="parent"  >
+    <div  [id]="node" class="parent-item" (click)="parentNodeClick($event, node)" *ngFor="let node of parentNodes" > {{node}} </div>
+</div>

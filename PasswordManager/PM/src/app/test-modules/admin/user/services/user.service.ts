@@ -15,7 +15,9 @@ export class UserService {
      'Content-Type':'application/json; charset=utf-8;' 
       ,'Accept':'*/*'
     })
-    let data = await this.http.get("https://localhost:44328/api/auth", { headers }).toPromise();
+    let path = "https://localhost:44328/api/auth";
+    // let path = "http://localhost:8082/api/auth";
+    let data = await this.http.get(path, { headers }).toPromise();
     if (data) {
       console.log(data);
     }
