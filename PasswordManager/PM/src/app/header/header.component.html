@@ -3,6 +3,7 @@
     <div class="wrapper__logo" routerLink="" >Prash tech Logo</div>
     <div class="deveper-detail">PrashTech</div>
     <div class="user-detail">
+      <div class="user-detail__signup menu-item" routerLink="menu" >Menu</div>
       <div *ngIf="!isLoggedIn" class="user-detail__signup" routerLink="signup" >SignUp</div>
       <div *ngIf="!isLoggedIn" class="login" routerLink="signin" >Login</div>
     </div>

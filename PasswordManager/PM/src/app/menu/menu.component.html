@@ -1,0 +1,8 @@
+<dx-menu #menu 
+  [dataSource]="products" 
+  displayExpr="text" 
+  orientation="horizontal" 
+  submenuDirection="auto" 
+  [hideSubmenuOnMouseLeave]="false" 
+  (onItemClick)="itemClick($event)">
+</dx-menu>

@@ -4,7 +4,8 @@ import {
   DxDataGridModule, DxDropDownBoxModule, DxLookupModule, DxSelectBoxModule,
   DxPopupModule, 
   DxTextBoxModule,
-  DxButtonModule} from 'devextreme-angular';
+  DxButtonModule,
+  DxMenuModule} from 'devextreme-angular';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -18,9 +19,10 @@ import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { AdduserComponent } from './adduser/adduser.component';
 import { HttpClientModule } from '@angular/common/http';
+import { MenuComponent } from './menu/menu.component';
 
 @NgModule({
-  declarations: [			
+  declarations: [				
     AppComponent,
     LookupTestComponent,
     PasswordListComponent,
@@ -30,7 +32,8 @@ import { HttpClientModule } from '@angular/common/http';
     SigninComponent,
       PagenotfoundComponent,
       DashboardComponent,
-      AdduserComponent
+      AdduserComponent,
+      MenuComponent
    ],
   imports: [
     BrowserModule,
@@ -42,7 +45,8 @@ import { HttpClientModule } from '@angular/common/http';
     DxSelectBoxModule,
     DxPopupModule,
     DxTextBoxModule,
-    DxButtonModule
+    DxButtonModule,
+    DxMenuModule
   ],
   providers: [],
   bootstrap: [AppComponent]
