@@ -20,9 +20,10 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { AdduserComponent } from './adduser/adduser.component';
 import { HttpClientModule } from '@angular/common/http';
 import { MenuComponent } from './menu/menu.component';
+import { FlexboxLearnComponent } from './Learning/flexbox-learn/flexbox-learn.component';
 
 @NgModule({
-  declarations: [				
+  declarations: [
     AppComponent,
     LookupTestComponent,
     PasswordListComponent,
@@ -30,11 +31,12 @@ import { MenuComponent } from './menu/menu.component';
     HeaderComponent,
     SignupComponent,
     SigninComponent,
-      PagenotfoundComponent,
-      DashboardComponent,
-      AdduserComponent,
-      MenuComponent
-   ],
+    PagenotfoundComponent,
+    DashboardComponent,
+    AdduserComponent,
+    MenuComponent,
+    FlexboxLearnComponent
+  ],
   imports: [
     BrowserModule,
     AppRoutingModule,

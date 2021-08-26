@@ -6,6 +6,7 @@ import { SigninComponent } from './Authorization/signin/signin.component';
 import { SignupComponent } from './Authorization/signup/signup.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { LayoutComponent } from './layout/layout.component';
+import { FlexboxLearnComponent } from './Learning/flexbox-learn/flexbox-learn.component';
 import { MenuComponent } from './menu/menu.component';
 import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
 
@@ -26,6 +27,7 @@ const routes: Routes = [
             (m) => m.SettingsModule
           ),
       },
+      {path: 'flex', component: FlexboxLearnComponent}
     ],
   },
 

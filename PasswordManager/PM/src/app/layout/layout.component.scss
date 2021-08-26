@@ -17,5 +17,6 @@
 }
 
 .app-body {
-  min-height: 95vh;
+  height: calc(100% - 5vh);
+  padding: 1em;
 }

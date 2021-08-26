@@ -1,0 +1,39 @@
+.parent {
+  width: 100%;
+  height: calc(200px + 4 * 1em + 4 * 10px);
+
+  background-color: plum;
+  padding: 1em;
+  box-sizing: border-box;
+
+  display: flex;
+  flex-direction: column;
+
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-wrap: wrap;
+
+  overflow: auto;
+}
+
+.item {
+  background-color: aqua;
+  width: 24%;
+  min-width: 100px;
+  height: 100px;
+  padding: 10px;
+  box-sizing: border-box;
+  margin: 1em;
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: black;
+}
+
+h1 {
+  color: white;
+  text-align: center;
+}
